@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Three.js 特效参考画廊 · Effects Reference Gallery</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <!-- Three.js r160+ + lil-gui via import map (ES modules) -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+      "lil-gui": "https://unpkg.com/lil-gui@0.19.2/dist/lil-gui.esm.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <header class="sidebar-header">
+        <h1>Three.js 特效库</h1>
+        <p class="subtitle">可调参数 · 可复制模块</p>
+      </header>
+      <nav id="effect-nav" aria-label="特效分类"></nav>
+      <footer class="sidebar-footer">
+        <a href="../SKILL.md" title="技能文档">← 返回 SKILL</a>
+      </footer>
+    </aside>
+    <main id="stage">
+      <div id="canvas-wrap">
+        <canvas id="c"></canvas>
+        <div id="hud">
+          <h2 id="effect-title">选择特效</h2>
+          <p id="effect-hint">从左侧选择分类与效果</p>
+        </div>
+      </div>
+      <aside id="gui-host" aria-label="参数面板"></aside>
+    </main>
+    <section id="code-panel" hidden>
+      <div class="code-toolbar">
+        <span>参考模块路径</span>
+        <code id="module-path"></code>
+        <button type="button" id="btn-copy-path">复制路径</button>
+      </div>
+    </section>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
